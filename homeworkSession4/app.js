@@ -310,120 +310,121 @@ const product = [
 // }
 
 // 11 + 12
-// const cmds = [
-//   {
-//     shape: "circle",
-//     x: 0,
-//     y: -20,
-//     radius: 60
-//   },
-//   {
-//     shape: "circle",
-//     x: 0,
-//     y: 80,
-//     radius: 40
-//   },
-//   {
-//     shape: "circle",
-//     x: -75,
-//     y: 10,
-//     radius: 20
-//   },
-//   {
-//     shape: "circle",
-//     x: 75,
-//     y: 10,
-//     radius: 20
-//   },
-//   {
-//     shape: "square",
-//     x: -65,
-//     y: -100,
-//     width: 30
-//   },
-//   {
-//     shape: "square",
-//     x: 38,
-//     y: -100,
-//     width: 30
-//   },
+const cmds = [
+  {
+    shape: "circle",
+    x: 0,
+    y: -20,
+    radius: 60
+  },
+  {
+    shape: "circle",
+    x: 0,
+    y: 80,
+    radius: 40
+  },
+  {
+    shape: "circle",
+    x: -75,
+    y: 10,
+    radius: 20
+  },
+  {
+    shape: "circle",
+    x: 75,
+    y: 10,
+    radius: 20
+  },
+  {
+    shape: "square",
+    x: -65,
+    y: -100,
+    width: 30
+  },
+  {
+    shape: "square",
+    x: 38,
+    y: -100,
+    width: 30
+  },
 
-//   {
-//     shape: "rect",
-//     x: -30,
-//     y: 80,
-//     width: 20,
-//     height: 4
-//   },
-//   {
-//     shape: "rect",
-//     x: 10,
-//     y: 80,
-//     width: 20,
-//     height: 4
-//   },
-//   {
-//     shape: "rect",
-//     x: -10,
-//     y: 50,
-//     width: 20,
-//     height: 6
-//   },
-//   {
-//     shape: "square",
-//     x: 500,
-//     y: 500,
-//     width: 20
-//   }
-// ];
-// function draw(x, y) {
-//   rt(90);
-//   fd(x);
-//   lt(90);
-//   fd(y);
-// }
-// function drawSquare(width) {
-//   for (let i = 0; i < 4; i++) {
-//     fd(width);
-//     rt(90);
-//   }
-// }
-// function drawRect(height, width) {
-//   for (let i = 0; i < 2; i++) {
-//     fd(height);
-//     rt(90);
-//     fd(width);
-//     rt(90);
-//   }
-// }
-// function drawCircle(radius) {
-//   for (let i = 0; i < 100; i++) {
-//     fd(radius);
-//     rt(90);
-//     for (let i = 0; i < 96; i++) {
-//       fd((radius / 30) * 2);
-//       rt(360 / 96);
-//     }
-//   }
-// }
-// for (const cmd of cmds) {
-//   if (cmd.shape === "square") {
-//     penup();
-//     draw(cmd.x, cmd.y);
-//     pendown();
-//     drawSquare(cmd.width);
-//   } else if (cmd.shape === "rect") {
-//     penup();
-//     draw(cmd.x, cmd.y);
-//     pendown();
-//     drawRect(cmd.height, cmd.width);
-//   } else if (cmd.shape === "circle") {
-//     penup();
-//     draw(cmd.x, cmd.y);
-//     pendown();
-//     drawCircle(cmd.radius);
-//   }
-// }
+  {
+    shape: "rect",
+    x: -30,
+    y: 80,
+    width: 20,
+    height: 4
+  },
+  {
+    shape: "rect",
+    x: 10,
+    y: 80,
+    width: 20,
+    height: 4
+  },
+  {
+    shape: "rect",
+    x: -10,
+    y: 50,
+    width: 20,
+    height: 6
+  },
+  {
+    shape: "square",
+    x: 500,
+    y: 500,
+    width: 20
+  }
+];
+function draw(x, y) {
+  rt(90);
+  fd(x);
+  lt(90);
+  fd(y);
+}
+function drawSquare(width) {
+  for (let i = 0; i < 4; i++) {
+    fd(width);
+    rt(90);
+  }
+}
+function drawRect(height, width) {
+  for (let i = 0; i < 2; i++) {
+    fd(height);
+    rt(90);
+    fd(width);
+    rt(90);
+  }
+}
+function drawCircle(radius) {
+  for (let i = 0; i < 100; i++) {
+    fd(radius);
+    rt(90);
+    for (let i = 0; i < 96; i++) {
+      fd((radius / 30) * 2);
+      rt(360 / 96);
+    }
+  }
+}
+for (const cmd of cmds) {
+  if (cmd.shape === "square") {
+    penup();
+    draw(cmd.x, cmd.y);
+    pendown();
+    drawSquare(cmd.width);
+  } else if (cmd.shape === "rect") {
+    penup();
+    draw(cmd.x, cmd.y);
+    pendown();
+    drawRect(cmd.height, cmd.width);
+  } else if (cmd.shape === "circle") {
+    penup();
+    draw(cmd.x, cmd.y);
+    pendown();
+    drawCircle(cmd.radius);
+  }
+  home();
+}
 //16
 const oldData = {
   firedRice: {
