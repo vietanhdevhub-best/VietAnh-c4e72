@@ -23,8 +23,13 @@ const data = [
 
 const tableBody = document.querySelector("tbody");
 console.log(tableBody);
-tableBody.innerHTML =
-  " <tr><td>Learn front-end</td><td>Learn HTML</td><td>6</td></tr><tr><td>Learn front-end</td><td>Learn CSS</td><td>8</td></tr><tr><td>Learn front-end</td><td>Learn JS variable and datatype</td><td>6</td></tr><tr><td>Learn Git</td><td>Learn Git basics</td><td>2</td></tr> ";
+for (const item of data) {
+  tableBody.innerHTML += `<tr>
+  <td>${item.project}</td>
+  <td>${item.task}</td>
+  <td>${item["time spent"]}</td>
+</tr>`;
+}
 const task = document.querySelector("#task");
 const project = document.querySelector("#project");
 const time = document.querySelector("#time");
